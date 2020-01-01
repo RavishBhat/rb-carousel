@@ -2,8 +2,13 @@
   "author": "Ravish Bhat",
   "description": "Simple Carousel",
   "name": "rb-carousel",
-  "version": "0.0.4",
+  "version": "0.0.7",
   "license": "MIT",
+  "email" : "raish1479@gmail.com",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/RavishBhat/rb-carousel"
+  },
   "keywords":[ "angular-carousel","carousel","rb-carousel", "angular"],
   "peerDependencies": {
     "@angular/common": "^8.2.14",
