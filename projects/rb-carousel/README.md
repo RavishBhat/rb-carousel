@@ -50,6 +50,14 @@ export class AppModule { }
  
  ```
  
+:heavy_exclamation_mark:**Note:** The Carousel takes the height and width of the parent element. So if you have to adjust the height and width of carousel apply the same to the parent element as follows:
+
+```javascript
+<div style="width:50%">
+<rb-carousel [dataSource]="imageArray" [carouselSettings]="carouselSettings"></rb-carousel>
+</div>
+```
+ 
  :point_right: **Step 4:** Pass the `dataSource` and `carouselSettings`
  
  :heavy_exclamation_mark:**Note:** Make sure you pass the `dataSource` with an *array of objects* with `imageUrl` key, as this acts as source to the images. The `CaptionText` is optional though.
