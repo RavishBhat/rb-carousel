@@ -120,7 +120,7 @@ Here are the list of inbuilt animations :
 You can always add your own animation. As below:
 
 Style.scss
-```
+```javascript
 .rotatecenter {
   animation: rotatecenterFrame 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
 }
@@ -150,7 +150,7 @@ Style.scss
 
 And pass the animation to the `carouselSettings`
 
-```
+```javascript
  carouselSettings = {
    autoTransition: true,
    transitionDuration: 2000,

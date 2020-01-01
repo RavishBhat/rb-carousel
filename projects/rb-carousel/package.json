@@ -1,6 +1,10 @@
 {
+  "author": "Ravish Bhat",
+  "description": "Simple Carousel",
   "name": "rb-carousel",
-  "version": "0.0.1",
+  "version": "0.0.3",
+  "license": "MIT",
+  "keywords":[ "angular-carousel","carousel","rb-carousel", "angular"],
   "peerDependencies": {
     "@angular/common": "^8.2.14",
     "@angular/core": "^8.2.14"
