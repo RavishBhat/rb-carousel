@@ -120,7 +120,7 @@ Here are the list of inbuilt animations :
 You can always add your own animation. As below:
 
 Style.scss
-```javascript
+```css
 .rotatecenter {
   animation: rotatecenterFrame 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
 }
@@ -192,6 +192,10 @@ Something like this:
 ## Author
 
 **Ravish Bhat**
+
+Want my help or need any changes reach out to me at *ravish1479@gmail.com*
+
+
 
 ## License
 
