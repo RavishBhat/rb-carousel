@@ -1,6 +1,6 @@
-# Carosel
+# rb-carosel
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.4.
+A simple yet elegant carousel plugin for Angular .:smiling_imp:
 
 ## Development server
 
