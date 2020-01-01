@@ -2,7 +2,7 @@
   "author": "Ravish Bhat",
   "description": "Simple Carousel",
   "name": "rb-carousel",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "license": "MIT",
   "keywords":[ "angular-carousel","carousel","rb-carousel", "angular"],
   "peerDependencies": {
