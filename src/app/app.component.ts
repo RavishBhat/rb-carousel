@@ -10,14 +10,13 @@ export class AppComponent {
   imageArray= [
     {CaptionText:'rrbi',imageUrl:'https://ravishimages.s3.ap-south-1.amazonaws.com/myImages/IMG20180714090141.jpg'},
     {CaptionText:'super',imageUrl:'https://ravishimages.s3.ap-south-1.amazonaws.com/myImages/IMG20180914095217.jpg'},  
-    {CaptionText:'awesom',imageUrl:'https://ravishimages.s3.ap-south-1.amazonaws.com/myImages/IMG20180930135227.jpg'}
-    
+    {CaptionText:'awesom',imageUrl:'https://ravishimages.s3.ap-south-1.amazonaws.com/myImages/IMG20180930135227.jpg'}    
   ];
 
-  caroselSettings = {
+  carouselSettings = {
     autoTransition: false,
     transitionDuration:2000,
-    animation:'random',
+    animation:'fade',
     displayImageCount: true,
     loopCarousel: false
   }

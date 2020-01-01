@@ -8,7 +8,7 @@ import { Component, OnInit, Input, AfterViewInit, Renderer, Renderer2, ElementRe
 export class RbImageContainerComponent implements OnInit, AfterViewInit {
   slideIndex = 1;
   @Input() dataSource: Array<object>;
-  @Input() caroselSettings: any;
+  @Input() carouselSettings: any;
   @Output() carouselEnd: EventEmitter<any> = new EventEmitter();
   @Output() transitionStart: EventEmitter<any> = new EventEmitter();
   @Output() transitionEnd: EventEmitter<any> = new EventEmitter();
@@ -32,12 +32,12 @@ export class RbImageContainerComponent implements OnInit, AfterViewInit {
     var slides = this.elem.nativeElement.querySelectorAll('.carouselSlides');
 
     slides.forEach((ele: HTMLElement) => {
-      if (this.caroselSettings.animation) {
-        if (this.caroselSettings.animation.toLowerCase() == 'random') {
+      if (this.carouselSettings.animation) {
+        if (this.carouselSettings.animation.toLowerCase() == 'random') {
           let animeClass = this.getRandomAnimeClass();
           ele.classList.add(animeClass);
         } else {
-          ele.classList.add(this.caroselSettings.animation);
+          ele.classList.add(this.carouselSettings.animation);
         }
       } else {
         ele.classList.add('fade');
@@ -52,8 +52,8 @@ export class RbImageContainerComponent implements OnInit, AfterViewInit {
   }
 
   plusSlides(n, data) {
-    if (this.caroselSettings) {
-      if (this.caroselSettings.autoTransition) {
+    if (this.carouselSettings) {
+      if (this.carouselSettings.autoTransition) {
         clearTimeout(this.timeOut);
       }
     }
@@ -62,15 +62,15 @@ export class RbImageContainerComponent implements OnInit, AfterViewInit {
     } else {
       this.onPreviousSlide.emit(data);
     }
-    if (n - 1 !== this.dataSource.length || this.caroselSettings.loopCarousel) {
+    if (n - 1 !== this.dataSource.length || this.carouselSettings.loopCarousel) {
       this.showSlides(this.slideIndex += n, data);
     }
 
   }
 
   currentSlide(n, data) {
-    if (this.caroselSettings) {
-      if (this.caroselSettings.autoTransition) {
+    if (this.carouselSettings) {
+      if (this.carouselSettings.autoTransition) {
         clearTimeout(this.timeOut);
       }
     }
@@ -95,12 +95,12 @@ export class RbImageContainerComponent implements OnInit, AfterViewInit {
     });
     slides[this.slideIndex - 1].style.display = "block";
     dots[this.slideIndex - 1].className += " active";
-    if (this.caroselSettings) {
-      if (this.caroselSettings.autoTransition) {
+    if (this.carouselSettings) {
+      if (this.carouselSettings.autoTransition) {
         this.timeOut = setTimeout(() => {
           this.slideIndex++;
           this.showSlides(this.slideIndex, this.dataSource[this.slideIndex - 1]);
-        }, this.caroselSettings.transitionDuration);
+        }, this.carouselSettings.transitionDuration);
       }
     }
     this.transitionEnd.emit(data);

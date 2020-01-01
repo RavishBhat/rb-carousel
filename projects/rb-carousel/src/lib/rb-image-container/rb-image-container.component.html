@@ -2,11 +2,11 @@
 <div class="carousel-container">
 
     <div class="carouselSlides " *ngFor="let item of dataSource; let i = index">
-      <a class="prev" (click)="plusSlides(-1, item)" *ngIf="i != 0 || caroselSettings.loopCarousel">&#10094;</a>
-      <div class="numbertext" *ngIf="caroselSettings.displayImageCount">{{i+1}} / {{dataSource.length}}</div>
+      <a class="prev" (click)="plusSlides(-1, item)" *ngIf="i != 0 || carouselSettings.loopCarousel">&#10094;</a>
+      <div class="numbertext" *ngIf="carouselSettings.displayImageCount">{{i+1}} / {{dataSource.length}}</div>
       <img class="carouselImage" [src]="item.imageUrl" style="width:100%">
       <div class="text" *ngIf="item.CaptionText">{{item.CaptionText}}</div>     
-      <a class="next" (click)="plusSlides(1, item)" *ngIf="i+1 !== dataSource.length || caroselSettings.loopCarousel">&#10095;</a>
+      <a class="next" (click)="plusSlides(1, item)" *ngIf="i+1 !== dataSource.length || carouselSettings.loopCarousel">&#10095;</a>
     </div>   
    
     

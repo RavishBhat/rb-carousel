@@ -1,17 +1,10 @@
-
-<div class="container"> 
-<rb-carousel [dataSource]="imageArray" [caroselSettings]="caroselSettings"
-(carouselEnd)="corouselEvent($event)"
- (transitionStart)="transitionStart($event)" 
- (transitionEnd)="transitionEnd($event)"
- (onNextSlide)="onNextSlide($event)"
- (onPreviousSlide)="onPreviousSlide($event)"
- ></rb-carousel>
+<div class="container">
+    <rb-carousel [dataSource]="imageArray" [carouselSettings]="carouselSettings" (carouselEnd)="corouselEvent($event)"
+        (transitionStart)="transitionStart($event)" (transitionEnd)="transitionEnd($event)"
+        (onNextSlide)="onNextSlide($event)" (onPreviousSlide)="onPreviousSlide($event)"></rb-carousel>
 
 </div>
-<div class="container"> 
-    <rb-carousel [dataSource]="imageArray" [caroselSettings]="caroselSettings"
-    (carouselEnd)="corouselEvent($event)"></rb-carousel>
-    
-    </div>
-    
+<div class="container">
+    <rb-carousel [dataSource]="imageArray" [carouselSettings]="carouselSettings"></rb-carousel>
+
+</div>

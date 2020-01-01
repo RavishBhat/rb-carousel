@@ -4,7 +4,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   selector: 'rb-carousel',
   template: `
    <rb-image-container [dataSource]="dataSource"
-   [caroselSettings]="caroselSettings"
+   [carouselSettings]="carouselSettings"
    (carouselEnd)="carouselEndEvent($event)"
    (transitionStart)="transitionBegan($event)"
    (transitionEnd)="transitionEnded($event)"
@@ -16,7 +16,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class  RbCarouselComponent implements OnInit {
   @Input() dataSource: Array<object>;
-  @Input() caroselSettings: object;
+  @Input() carouselSettings: object;
   @Output() carouselEnd: EventEmitter<any> = new EventEmitter();
   @Output() transitionStart: EventEmitter<any> = new EventEmitter();
   @Output() transitionEnd: EventEmitter<any> = new EventEmitter();
