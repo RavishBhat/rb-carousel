@@ -2,9 +2,10 @@
   "author": "Ravish Bhat",
   "description": "Simple Carousel",
   "name": "rb-carousel",
-  "version": "0.0.7",
+  "version": "0.0.9",
   "license": "MIT",
   "email" : "raish1479@gmail.com",
+  "homepage": "https://master.de0e8cpmg2b3c.amplifyapp.com/",
   "repository": {
     "type" : "git",
     "url" : "https://github.com/RavishBhat/rb-carousel"

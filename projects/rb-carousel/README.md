@@ -1,4 +1,4 @@
-# :zap::zap: rb-carosel :zap::zap:
+# :zap::zap: rb-carousel :zap::zap:
 
 A simple yet elegant carousel plugin for **Angular** .:smiling_imp:
 
