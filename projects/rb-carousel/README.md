@@ -2,6 +2,8 @@
 
 A simple yet elegant carousel plugin for **Angular** .:smiling_imp:
 
+[Click Here for Demo](https://master.de0e8cpmg2b3c.amplifyapp.com/)
+
 ## Installation and Usage
 
 :point_right: **Step 1:** Install the plugin. 
