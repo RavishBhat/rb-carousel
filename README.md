@@ -2,7 +2,7 @@
 
 A simple yet elegant carousel plugin for **Angular** .:smiling_imp:
 
-## Installation
+## Installation and Usage
 
 :point_right: **Step 1:** Install the plugin. 
 
@@ -85,22 +85,103 @@ export class AppComponent {
 
  :point_right: **Step 5:**  `Kidding !` , there is no step 5 :stuck_out_tongue_winking_eye: . Thats it you should be good to go. :triumph:
 
-## Code scaffolding
+## Configuration
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+:heavy_exclamation_mark:**Lets look into** `carouselSettings`
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Setting      | Value         | Purpose 
+------------ | ------------- | ------------- 
+autoTransition | boolean | enable / disable the auto transition of carousel.
+transitionDuration | integer | Time between transitions, will be only used if `autoTransition` is `true`
+animation | string | Select the animation for the slide transition. By default `fade`
+displayImageCount | boolean | enable/disable the image count on the top left of image.
+loopCarousel | boolean | Loop the carousel after reaching the end of slides.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Animations
 
-## Running end-to-end tests
+You can set the animation to your slide in the `carouselSettings` `animation` key.
+Here are the list of inbuilt animations :
+1. fade
+2. flipDiagonal
+3. rotateIn
+4. rotateFromTop
+5. rotateInDown
+6. bounceOut
+7. rotateSmallScale
+8. flipOver
+9. random
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+:heavy_exclamation_mark:**Note:** Setting `random` will randomly apply the animation to all the slides. 
+:heart_eyes: Hee He! I know !! Cool right? :sunglasses:
 
-## Further help
+:heavy_exclamation_mark: Don't like any of the inbuild animations. :disappointed: (you meanie :smirk:)
+You can always add your own animation. As below:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Style.scss
+```
+.rotatecenter {
+  animation: rotatecenterFrame 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+
+@-webkit-keyframes rotatecenterFrame {
+    0% {
+      -webkit-transform: rotateX(0);
+              transform: rotateX(0);
+    }
+    100% {
+      -webkit-transform: rotateX(-360deg);
+              transform: rotateX(-360deg);
+    }
+  }
+  @keyframes rotatecenterFrame {
+    0% {
+      -webkit-transform: rotateX(0);
+              transform: rotateX(0);
+    }
+    100% {
+      -webkit-transform: rotateX(-360deg);
+              transform: rotateX(-360deg);
+    }
+  }
+
+```
+
+And pass the animation to the `carouselSettings`
+
+```
+ carouselSettings = {
+   autoTransition: true,
+   transitionDuration: 2000,
+   animation: 'rotatecenter',
+   displayImageCount: true,
+   loopCarousel: true
+ }
+```
+
+Yep! Totally customizable .:punch:
+
+## Carousel Events
+
+Here are a list of Events that the plugin is equipped with:
+
+Event      | Returns         | Functionality 
+------------ | ------------- | ------------- 
+carouselEnd | boolean | When the carousel is at its last slide. Right time to fetch more data.
+transitionStart | object | At the begining of slide transition. Returns the `image object` passed. 
+transitionEnd | object | At the end of slide transition. Returns the `image object` passed. 
+onNextSlide | object | When clicked on `next` button.
+onPreviousSlide | object | When clicked on `prev` button.
+
+## Author
+
+**Ravish Bhat**
+
+## License
+
+**MIT**
+
+
+
+
