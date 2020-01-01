@@ -174,6 +174,21 @@ transitionEnd | object | At the end of slide transition. Returns the `image obje
 onNextSlide | object | When clicked on `next` button.
 onPreviousSlide | object | When clicked on `prev` button.
 
+
+Something like this:
+```javascript
+ <rb-carousel 
+ [dataSource]="imageArray"
+ [carouselSettings]="carouselSettings" 
+ (carouselEnd)="corouselEvent($event)" 
+ (transitionStart)="transitionStart($event)"
+ (transitionEnd)="transitionEnd($event)"
+ (onNextSlide)="onNextSlide($event)" 
+ (onPreviousSlide)="onPreviousSlide($event)">
+ </rb-carousel>
+        
+```
+
 ## Author
 
 **Ravish Bhat**
