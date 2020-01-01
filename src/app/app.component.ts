@@ -20,7 +20,6 @@ export class AppComponent {
     animation:'random',
     displayImageCount: true,
     loopCarousel: false
-
   }
 
   corouselEvent(data){
